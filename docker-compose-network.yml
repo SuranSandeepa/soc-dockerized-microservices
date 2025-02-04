@@ -1,0 +1,17 @@
+networks:
+  microservice_network:
+
+services:
+  node-service:
+    build: ./node-service
+    ports:
+      - "5000:5000"
+    networks:
+      - microservice_network
+
+  python-service:
+    build: ./python-service
+    ports:
+      - "7000:7000"
+    networks:
+      - microservice_network
