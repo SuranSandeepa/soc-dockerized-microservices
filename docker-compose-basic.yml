@@ -1,0 +1,14 @@
+version: "3.8" # Use the latest version of the Compose file format
+
+services:
+  node-service:
+    build: ./node-service # Build the image from the Dockerfile in the node-service directory
+    ports:
+      - "5000:5000"
+    restart: always # Restart the container if it fails
+
+  python-service:
+    build: ./python-service # Build the image from the Dockerfile in the python-service directory
+    ports:
+      - "7000:7000"
+    restart: always # Restart the container if it fails
